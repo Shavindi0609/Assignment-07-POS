@@ -5,6 +5,13 @@
     font-family: 'Merriweather', serif;
 }
 
+:root {
+    --primary-color: #b2744c;
+    --secondary-color: #4b3832;
+    --bg-color: #f7f5f2;
+    --accent-color: crimson;
+}
+
 .all-content{
     background: #f7f5f2;
 }
@@ -24,6 +31,7 @@ html ::-webkit-scrollbar{
 #navbar{
     background-color: #b2744c;
     font-family: 'Roboto', sans-serif;
+    height: 74px;
 }
 #logo img{
     border-radius: 10px;
@@ -49,6 +57,22 @@ html ::-webkit-scrollbar{
     color: white;
     border: 1px solid white;
 }
+
+#search-btn {
+    margin: 0;
+    padding: 0;
+}
+
+#search-btn input {
+    max-width: 200px;
+    font-size: 14px;
+}
+
+#search-btn button {
+    font-size: 14px;
+}
+
+
 /*navbar end*/
 
 /*home section start*/
@@ -133,14 +157,513 @@ html ::-webkit-scrollbar{
 /*home section end*/
 
 /*item start*/
-.item{
-    width: 100%;
-    background: #f7f5f2 ;
+/*.item{*/
+/*    width: 100%;*/
+/*    background: #f7f5f2 ;*/
+/*    font-family: 'Roboto', sans-serif;*/
+/*}*/
+
+/*.bg-duburu {*/
+/*    background-color: #4b3832 !important; !* light brown *!*/
+/*    color: white; !* text color *!*/
+/*}*/
+/* Item Page Styling */
+.item h2.text-center {
+    color: #b2744c;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #b2744c;
+    padding-bottom: 10px;
     font-family: 'Roboto', sans-serif;
 }
 
-.bg-duburu {
-    background-color: #4b3832 !important; /* light brown */
-    color: white; /* text color */
+.card-header.bg-duburu {
+    background-color: #4b3832;
+    font-weight: bold;
+    font-size: 18px;
 }
+
+.card {
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* Input and Select Fields */
+.item form input,
+.item form select,
+.item form textarea {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+.item form input:focus,
+.item form select:focus,
+.item form textarea:focus {
+    border-color: #b2744c;
+    box-shadow: 0 0 0 0.15rem rgba(178, 116, 76, 0.25);
+}
+
+/* Buttons */
+.item .btn-success {
+    background-color: crimson;
+    border: none;
+}
+
+.item .btn-success:hover {
+    background-color: crimson;
+    color: black;
+}
+
+.item .btn-danger {
+    background-color: darkgreen;
+    border: none;
+    color: white;
+}
+
+.item .btn-danger:hover {
+    background-color: darkgreen;
+    color: black;
+}
+
+.item .btn-warning {
+    background-color: #e0a800;
+    border: none;
+    color: white;
+}
+
+.item .btn-warning:hover {
+    background-color: #c69500;
+}
+
+.item .btn-info {
+    background-color: #b2744c;
+    border: none;
+    color: white;
+}
+
+.item .btn-info:hover {
+    background-color: #4b3832;
+    color: white;
+}
+
+.item .btn-primary {
+    background-color: #4b3832;
+    border: none;
+    color: white;
+}
+
+.item .btn-primary:hover {
+    background-color: #b2744c;
+}
+
+/* Table */
+.item .table th {
+    background-color: #b2744c;
+    color: black;
+    font-weight: bold;
+}
+
+.item .table td,
+.item .table th {
+    vertical-align: middle;
+}
+
 /*item end*/
+
+/* Customer Page General Styling */
+.customer h2.text-center {
+    color: #b2744c;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #b2744c;
+    padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-header.bg-duburu {
+    background-color: #4b3832;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* Search Form Elements */
+.customer form input,
+.customer form select {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+.customer form input:focus,
+.customer form select:focus {
+    border-color: #b2744c;
+    box-shadow: 0 0 0 0.15rem rgba(178, 116, 76, 0.25);
+}
+
+/* Customer Page Buttons */
+.customer .btn-success {
+    background-color: crimson;
+    border: none;
+}
+
+.customer .btn-success:hover {
+    background-color: crimson;
+    color: black;
+}
+
+.customer .btn-danger {
+    background-color: darkgreen;
+    border: none;
+    color: white;
+}
+
+.customer .btn-danger:hover {
+    background-color: darkgreen;
+    color: black;
+}
+
+.customer .btn-warning {
+    background-color: #e0a800;
+    border: none;
+    color: white;
+}
+
+.customer .btn-warning:hover {
+    background-color: #c69500;
+    color: white;
+}
+
+.customer .btn-info {
+    background-color: #b2744c;
+    border: none;
+    color: white;
+}
+
+.customer .btn-info:hover {
+    background-color: #4b3832;
+    color: white;
+}
+
+.customer .btn-primary {
+    background-color: #4b3832;
+    border: none;
+    color: white;
+}
+
+.customer .btn-primary:hover {
+    background-color: #b2744c;
+    color: white;
+}
+
+/* Customer Table */
+.customer .table th {
+    background-color: #b2744c;
+    color: black;
+    font-weight: bold;
+}
+
+.customer .table td,
+.customer .table th {
+    vertical-align: middle;
+}
+/*customer end*/
+/* Order Form Styling */
+.container {
+    font-family: 'Roboto', sans-serif;
+    background: #f7f5f2;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+h2.text-center {
+    color: #b2744c;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #b2744c;
+    padding-bottom: 10px;
+}
+
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* Section Headings */
+form h5.text {
+    color: #4b3832;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+
+}
+
+/* Labels */
+form label {
+    font-weight: 600;
+    color: #4b3832;
+}
+
+/* Inputs, Selects */
+form input,
+form select,
+form textarea {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #b2744c;
+    box-shadow: 0 0 0 0.15rem rgba(178, 116, 76, 0.25);
+}
+
+/* Buttons */
+form button {
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+form .btn-info {
+    background-color: #b2744c;
+    border: none;
+    color: white;
+}
+
+form .btn-info:hover {
+    background-color: #4b3832;
+    color: black;
+}
+
+form .btn-danger {
+    background-color: darkgreen;
+    border: none;
+}
+
+form .btn-danger:hover {
+    background-color: darkgreen;
+    color:black;
+}
+
+form .btn-success {
+    background-color: crimson;
+    border: none;
+}
+
+form .btn-success:hover {
+    background-color: crimson;
+    color: black;
+}
+
+form .btn-warning {
+    background-color: #e0a800;
+    border: none;
+    color: white;
+}
+
+form .btn-warning:hover {
+    background-color: #c69500;
+
+}
+
+/* Table */
+.table-bordered th {
+    background-color: #b2744c !important;
+    color: black;
+    font-weight: bold;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+/*register start*/
+/* Register Page Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f7f5f2;
+}
+
+.card1 {
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: none;
+}
+
+.card-body-register {
+    padding: 2rem;
+
+}
+
+.logo-img img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+#coffee{
+    justify-content: center;
+    text-align: center;
+    color: #b2744c;
+}
+p.text-center {
+    color: #4b3832;
+    font-weight: 500;
+}
+
+label.form-label {
+    font-weight: 600;
+    color: #4b3832;
+}
+
+input.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+input.form-control:focus {
+    border-color: #b2744c;
+    box-shadow: 0 0 0 0.15rem rgba(178, 116, 76, 0.25);
+}
+
+.btn-primary {
+    background-color: #b2744c;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #4b3832;
+    color: white;
+}
+
+a.text-primary {
+    color: #b2744c !important;
+    text-decoration: none;
+}
+
+a.text-primary:hover {
+    color: #4b3832 !important;
+    text-decoration: underline;
+}
+
+.fs-4.fw-bold {
+    color: #4b3832;
+}
+
+p.text{
+    font-size: 15px;
+}
+
+/* =================== */
+/*      Login Page     */
+/* =================== */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f7f5f2;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: none;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.logo-img img {
+    max-width: 140px;
+    margin-bottom: 10px;
+}
+
+#coffee{
+    justify-content: center;
+    text-align: center;
+    color: #b2744c;
+}
+
+p.text-center {
+    color: #4b3832;
+    font-weight: 500;
+}
+
+label.form-label {
+    font-weight: 600;
+    color: #4b3832;
+}
+
+input.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+input.form-control:focus {
+    border-color: #b2744c;
+    box-shadow: 0 0 0 0.15rem rgba(178, 116, 76, 0.25);
+}
+
+.btn-primary {
+    background-color: #b2744c;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #4b3832;
+    color: white;
+}
+
+.form-check-input:checked {
+    background-color: #b2744c;
+    border-color: #b2744c;
+}
+
+.form-check-label {
+    color: #4b3832;
+    font-weight: 500;
+}
+
+a.text-primary {
+    color: #b2744c !important;
+    text-decoration: none;
+}
+
+a.text-primary:hover {
+    color: #4b3832 !important;
+    text-decoration: underline;
+}
+
+.fs-4.fw-bold {
+    color: #4b3832;
+}
+
+#text-label {
+    font-size: 15px;
+    width: 130px;
+}
+
+#text-fogot {
+    width: 160px;
+    font-size: 15px;
+}
